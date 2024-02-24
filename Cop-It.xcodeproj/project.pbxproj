@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		586E530F2B8A48DA00A6EF30 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 586E530E2B8A48DA00A6EF30 /* RealityKitContent */; };
+		586E53112B8A48DA00A6EF30 /* Cop_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E53102B8A48DA00A6EF30 /* Cop_ItApp.swift */; };
+		586E53132B8A48DA00A6EF30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E53122B8A48DA00A6EF30 /* ContentView.swift */; };
+		586E53152B8A48DA00A6EF30 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E53142B8A48DA00A6EF30 /* ImmersiveView.swift */; };
+		586E53172B8A48DB00A6EF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586E53162B8A48DB00A6EF30 /* Assets.xcassets */; };
+		586E531A2B8A48DB00A6EF30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586E53192B8A48DB00A6EF30 /* Preview Assets.xcassets */; };
+		586E53252B8A48DB00A6EF30 /* Cop_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E53242B8A48DB00A6EF30 /* Cop_ItTests.swift */; };
+		586E532F2B8A4EE200A6EF30 /* Vibes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E532E2B8A4EE200A6EF30 /* Vibes.swift */; };
+		586E53312B8A50E200A6EF30 /* VibesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E53302B8A50E200A6EF30 /* VibesDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		586E53212B8A48DB00A6EF30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 586E53012B8A48DA00A6EF30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 586E53082B8A48DA00A6EF30;
+			remoteInfo = "Cop-It";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		586E53092B8A48DA00A6EF30 /* Cop-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cop-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		586E530D2B8A48DA00A6EF30 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		586E53102B8A48DA00A6EF30 /* Cop_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cop_ItApp.swift; sourceTree = "<group>"; };
+		586E53122B8A48DA00A6EF30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		586E53142B8A48DA00A6EF30 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		586E53162B8A48DB00A6EF30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		586E53192B8A48DB00A6EF30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		586E531B2B8A48DB00A6EF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		586E53202B8A48DB00A6EF30 /* Cop-ItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cop-ItTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		586E53242B8A48DB00A6EF30 /* Cop_ItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cop_ItTests.swift; sourceTree = "<group>"; };
+		586E532E2B8A4EE200A6EF30 /* Vibes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibes.swift; sourceTree = "<group>"; };
+		586E53302B8A50E200A6EF30 /* VibesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibesDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		586E53062B8A48DA00A6EF30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586E530F2B8A48DA00A6EF30 /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		586E531D2B8A48DB00A6EF30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		586E53002B8A48DA00A6EF30 = {
+			isa = PBXGroup;
+			children = (
+				586E530B2B8A48DA00A6EF30 /* Cop-It */,
+				586E530C2B8A48DA00A6EF30 /* Packages */,
+				586E53232B8A48DB00A6EF30 /* Cop-ItTests */,
+				586E530A2B8A48DA00A6EF30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		586E530A2B8A48DA00A6EF30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				586E53092B8A48DA00A6EF30 /* Cop-It.app */,
+				586E53202B8A48DB00A6EF30 /* Cop-ItTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		586E530B2B8A48DA00A6EF30 /* Cop-It */ = {
+			isa = PBXGroup;
+			children = (
+				586E53102B8A48DA00A6EF30 /* Cop_ItApp.swift */,
+				586E53122B8A48DA00A6EF30 /* ContentView.swift */,
+				586E53142B8A48DA00A6EF30 /* ImmersiveView.swift */,
+				586E53302B8A50E200A6EF30 /* VibesDetailView.swift */,
+				586E532E2B8A4EE200A6EF30 /* Vibes.swift */,
+				586E53162B8A48DB00A6EF30 /* Assets.xcassets */,
+				586E531B2B8A48DB00A6EF30 /* Info.plist */,
+				586E53182B8A48DB00A6EF30 /* Preview Content */,
+			);
+			path = "Cop-It";
+			sourceTree = "<group>";
+		};
+		586E530C2B8A48DA00A6EF30 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				586E530D2B8A48DA00A6EF30 /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		586E53182B8A48DB00A6EF30 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				586E53192B8A48DB00A6EF30 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		586E53232B8A48DB00A6EF30 /* Cop-ItTests */ = {
+			isa = PBXGroup;
+			children = (
+				586E53242B8A48DB00A6EF30 /* Cop_ItTests.swift */,
+			);
+			path = "Cop-ItTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		586E53082B8A48DA00A6EF30 /* Cop-It */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 586E53282B8A48DB00A6EF30 /* Build configuration list for PBXNativeTarget "Cop-It" */;
+			buildPhases = (
+				586E53052B8A48DA00A6EF30 /* Sources */,
+				586E53062B8A48DA00A6EF30 /* Frameworks */,
+				586E53072B8A48DA00A6EF30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cop-It";
+			packageProductDependencies = (
+				586E530E2B8A48DA00A6EF30 /* RealityKitContent */,
+			);
+			productName = "Cop-It";
+			productReference = 586E53092B8A48DA00A6EF30 /* Cop-It.app */;
+			productType = "com.apple.product-type.application";
+		};
+		586E531F2B8A48DB00A6EF30 /* Cop-ItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 586E532B2B8A48DB00A6EF30 /* Build configuration list for PBXNativeTarget "Cop-ItTests" */;
+			buildPhases = (
+				586E531C2B8A48DB00A6EF30 /* Sources */,
+				586E531D2B8A48DB00A6EF30 /* Frameworks */,
+				586E531E2B8A48DB00A6EF30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				586E53222B8A48DB00A6EF30 /* PBXTargetDependency */,
+			);
+			name = "Cop-ItTests";
+			productName = "Cop-ItTests";
+			productReference = 586E53202B8A48DB00A6EF30 /* Cop-ItTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		586E53012B8A48DA00A6EF30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					586E53082B8A48DA00A6EF30 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					586E531F2B8A48DB00A6EF30 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 586E53082B8A48DA00A6EF30;
+					};
+				};
+			};
+			buildConfigurationList = 586E53042B8A48DA00A6EF30 /* Build configuration list for PBXProject "Cop-It" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 586E53002B8A48DA00A6EF30;
+			productRefGroup = 586E530A2B8A48DA00A6EF30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				586E53082B8A48DA00A6EF30 /* Cop-It */,
+				586E531F2B8A48DB00A6EF30 /* Cop-ItTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		586E53072B8A48DA00A6EF30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586E531A2B8A48DB00A6EF30 /* Preview Assets.xcassets in Resources */,
+				586E53172B8A48DB00A6EF30 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		586E531E2B8A48DB00A6EF30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		586E53052B8A48DA00A6EF30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586E53132B8A48DA00A6EF30 /* ContentView.swift in Sources */,
+				586E53112B8A48DA00A6EF30 /* Cop_ItApp.swift in Sources */,
+				586E53152B8A48DA00A6EF30 /* ImmersiveView.swift in Sources */,
+				586E532F2B8A4EE200A6EF30 /* Vibes.swift in Sources */,
+				586E53312B8A50E200A6EF30 /* VibesDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		586E531C2B8A48DB00A6EF30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586E53252B8A48DB00A6EF30 /* Cop_ItTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		586E53222B8A48DB00A6EF30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 586E53082B8A48DA00A6EF30 /* Cop-It */;
+			targetProxy = 586E53212B8A48DB00A6EF30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		586E53262B8A48DB00A6EF30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		586E53272B8A48DB00A6EF30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		586E53292B8A48DB00A6EF30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Cop-It/Preview Content\"";
+				DEVELOPMENT_TEAM = YHUTW85LXG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.vision.ARCheck.Cop-It";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		586E532A2B8A48DB00A6EF30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Cop-It/Preview Content\"";
+				DEVELOPMENT_TEAM = YHUTW85LXG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.vision.ARCheck.Cop-It";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		586E532C2B8A48DB00A6EF30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YHUTW85LXG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.vision.ARCheck.Cop-ItTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cop-It.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cop-It";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		586E532D2B8A48DB00A6EF30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YHUTW85LXG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.vision.ARCheck.Cop-ItTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cop-It.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cop-It";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		586E53042B8A48DA00A6EF30 /* Build configuration list for PBXProject "Cop-It" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				586E53262B8A48DB00A6EF30 /* Debug */,
+				586E53272B8A48DB00A6EF30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		586E53282B8A48DB00A6EF30 /* Build configuration list for PBXNativeTarget "Cop-It" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				586E53292B8A48DB00A6EF30 /* Debug */,
+				586E532A2B8A48DB00A6EF30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		586E532B2B8A48DB00A6EF30 /* Build configuration list for PBXNativeTarget "Cop-ItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				586E532C2B8A48DB00A6EF30 /* Debug */,
+				586E532D2B8A48DB00A6EF30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		586E530E2B8A48DA00A6EF30 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 586E53012B8A48DA00A6EF30 /* Project object */;
+}
