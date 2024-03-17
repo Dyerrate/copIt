@@ -11,32 +11,79 @@ import RealityKitContent
 
 
 struct ShoppingView: View {
-    var currentVibes: Vibes
+    @State var currentVibeIs: Vibes
+    
+    @State private var scrollAmount = 0.0
+    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    
+    @Environment(\.openWindow) private var openWindow
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    func createShoppingItemsTest() -> [ShoppableItem] {
+        let currentItems = ShoppableItem.demoListOfItems
+        let repeatedItems = Array(repeatElement(currentItems, count: 3)).flatMap { $0 } // assuming currentItems has 3 items
+        return repeatedItems
+    }
+    private var shoppingItems: [ShoppableItem] {
+        return createShoppingItemsTest()
+    }
     
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack {
-                    Button("Left Button") {
-                        // Action for the left button
+        
+        VStack {
+            HStack {
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(shoppingItems) { item in
+                        Button(action: {
+                            openWindow(id: "quickLookView")
+                        }) {
+                            ItemCard(currentItem: item)
+                                .frame(width: 150, height: 165)
+                        }
+                        .frame(width: 150, height: 165)
                     }
-                    Spacer()
-                    Button("Right Button") {
-                        // Action for the right button
-                    }
+                    
                 }
                 .padding()
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        ForEach(0..<5) { index in
-                            ShoppableItem() // Your custom card view
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(shoppingItems) { item in
+                        Button(action: {
+                            openWindow(id: "quickLookView")
+                        }) {
+                            ItemCard(currentItem: item)
+                                .frame(width: 150, height: 165)
                         }
+                        .frame(width: 150, height: 165)
                     }
-                    .padding()
+                    
                 }
-                .background(Color.clear)
+                Spacer()
             }
-            .navigationBarHidden(true) // Hides the default navigation bar
+            
+        }
+        .navigationBarTitle("Detail View")
+        .navigationBarTitleDisplayMode(.inline)// Sets the title for the navigation bar
+        /*.navigationBarBackButtonHidden(true)*/ // Hides the default back button
+        .toolbar {
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    //We will go to shoppingCart panel on the right
+                    openWindow(id: "ShoppingCartView")
+                }) {
+                    Image(systemName: "cart")
+                }
+            }
+            // Add more ToolbarItems for other purposes, if needed
+        }
+        
+        .onReceive(timer) { _ in
+            scrollAmount += 10
+            if scrollAmount > 1000 { // Reset scrollAmount after reaching a limit
+                scrollAmount = 0
+            }
+            
         }
     }
 }

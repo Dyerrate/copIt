@@ -16,7 +16,8 @@ struct Vibes: Identifiable, Hashable, Decodable, Encodable {
     
     static let listOfVibes: [Vibes] = [
         Vibes(id: 01, thumbnail: "povAction", title: "Golf", subtitle: "Looking for a fit for the back 9's?"),
-        Vibes(id: 02, thumbnail: "skiSlopes", title: "Aspen", subtitle: "Looking for a fit for the slopes?")
+        Vibes(id: 02, thumbnail: "skiSlopes", title: "Aspen", subtitle: "Looking for a fit for the slopes?"),
+        Vibes(id: 03, thumbnail: "winery", title: "Valley Winery", subtitle: "Having a wine tasting?")
     ]
     
     init(id: Int, thumbnail: String, title: String, subtitle: String) {

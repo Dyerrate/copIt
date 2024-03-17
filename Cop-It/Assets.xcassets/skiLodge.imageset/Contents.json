@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "skiLodge.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "skiLodge.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

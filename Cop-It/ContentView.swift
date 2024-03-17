@@ -10,57 +10,56 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
-    @State private var showImmersiveSpace = false
-    @State private var immersiveSpaceIsShown = false
-
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-
-    var body: some View {
-        VStack {
-            Text("What is the vibe for tonight?")
-                .font(.extraLargeTitle)
-            NavigationStack {
-                ForEach(Vibes.listOfVibes) { vibe in
-                    NavigationLink(destination: VibesDetailView(vibe: vibe)) {
-                        HStack {
-                            vibe.thumbnail
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                            VStack(alignment: .leading) {
-                                Text(vibe.title)
-                                    .font(.title)
-                                Text(vibe.subtitle)
-                                    .font(.subheadline)
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
-            Task {
-                if newValue {
-                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                    case .opened:
-                        immersiveSpaceIsShown = true
-                    case .error, .userCancelled:
-                        fallthrough
-                    @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
-                    }
-                } else if immersiveSpaceIsShown {
-                    await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
-                }
+    //changes
+    func openImmersive(selectedVibe: Vibes) {
+        Task {
+            let result = await openImmersiveSpace(id: selectedVibe.title)
+            if case .error = result {
+                print("There was an error opening up the current \(selectedVibe.title)")
             }
         }
     }
-}
-
-#Preview(windowStyle: .automatic) {
-    ContentView()
+    
+    private var listOfVibes = Vibes.listOfVibes
+    @State private var showImmersiveSpace = false
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                Spacer(minLength: 0)
+                Text("Choose your venue")
+                    .font(.extraLargeTitle2)
+                    .padding()
+                Spacer()
+                VStack {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .center, spacing: 20) {
+                            ForEach(listOfVibes) { vibe in
+                                NavigationLink(destination: ShoppingView(currentVibeIs: vibe).onAppear(perform: { self.openImmersive(selectedVibe: vibe)})) {
+                                    VStack {
+                                        Image(vibe.thumbnail)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height: 300) // Set as per your requirement
+                                            .cornerRadius(10)
+                                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                                .stroke(Color.gray, lineWidth: 1).allowsHitTesting(false))
+                                        Text(vibe.title)
+                                            .font(.title)
+                                            .multilineTextAlignment(.center)
+                                            .padding(.top, 5)
+                                    }
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+    }
 }

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct ShoppableItem: Identifiable {
+struct ShoppableItem: Identifiable, Equatable {
     let id: UUID
     let name: String
     let price: Double
@@ -27,4 +27,12 @@ struct ShoppableItem: Identifiable {
         self.description = description
         self.image = image
     }
+    
+    static let demoListOfItems: [ShoppableItem] = [ // This is a demo list of items
+  //      ShoppableItem(id: UUID(), name: "Shirt", price: 20.0, category: "Ski", inventoryCount: 100.0, description: "A nice shirt", image: Image("Shirt")),
+        ShoppableItem(id: UUID(), name: "Pants", price: 30.0, category: "Ski", inventoryCount: 100.0, description: "A nice pair of pants", image: Image("Pants")),
+        ShoppableItem(id: UUID(), name: "Shoes", price: 40.0, category: "Ski", inventoryCount: 100.0, description: "A nice pair of shoes", image: Image("Shoes")),
+        ShoppableItem(id: UUID(), name: "Hat", price: 10.0, category: "Ski", inventoryCount: 100.0, description: "A nice hat", image: Image("hat"))]
+    
+    
 }

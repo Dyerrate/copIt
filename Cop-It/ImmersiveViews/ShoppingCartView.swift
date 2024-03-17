@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct ShoppingCartView: View {
+    var body: some View {
+        VStack{
+            Text("You Cart is Empty :( ")
+                .font(.largeTitle)
+        }
+    }
+}

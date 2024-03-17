@@ -10,6 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct VibesDetailView: View {
+    let currentVibe: Vibes
     
     var body: some View {
         RealityView { content in
