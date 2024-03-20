@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		583282DB2BA7908B00A2CC0B /* SelectedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583282DA2BA7908B00A2CC0B /* SelectedItemViewModel.swift */; };
+		583282DF2BA89F5400A2CC0B /* skiHelmet.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 583282DE2BA89F5400A2CC0B /* skiHelmet.usdz */; };
+		583282E12BA89F6F00A2CC0B /* skis.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 583282E02BA89F6F00A2CC0B /* skis.usdz */; };
+		583282E32BA89F7300A2CC0B /* skiBoots.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 583282E22BA89F7300A2CC0B /* skiBoots.usdz */; };
 		585DB4D92B8B93B400C76E36 /* ShoppingSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585DB4D82B8B93B400C76E36 /* ShoppingSelectView.swift */; };
 		585DB4DC2B8B93DB00C76E36 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585DB4DB2B8B93DB00C76E36 /* AboutView.swift */; };
 		585DB4DE2B8B9B0D00C76E36 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585DB4DD2B8B9B0D00C76E36 /* HelpView.swift */; };
@@ -21,6 +25,7 @@
 		586E53312B8A50E200A6EF30 /* VibesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E53302B8A50E200A6EF30 /* VibesDetailView.swift */; };
 		5892AAA82BA61D6200476294 /* ShoppingCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5892AAA72BA61D6200476294 /* ShoppingCartView.swift */; };
 		5892AAAB2BA7396600476294 /* ShoppingViewItemBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5892AAAA2BA7396600476294 /* ShoppingViewItemBar.swift */; };
+		5892AAAD2BA7655900476294 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5892AAAC2BA7655900476294 /* ItemDetailView.swift */; };
 		58A6861F2B94EBA50088F771 /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A6861E2B94EBA50088F771 /* ShoppingView.swift */; };
 		58A686212B97F0580088F771 /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A686202B97F0580088F771 /* ItemCard.swift */; };
 		58A686232B97F3BD0088F771 /* ShoppableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A686222B97F3BD0088F771 /* ShoppableItem.swift */; };
@@ -36,7 +41,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5892AAB32BA76B7700476294 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		583282DA2BA7908B00A2CC0B /* SelectedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemViewModel.swift; sourceTree = "<group>"; };
+		583282DE2BA89F5400A2CC0B /* skiHelmet.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = skiHelmet.usdz; path = Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/skiHelmet.usdz; sourceTree = SOURCE_ROOT; };
+		583282E02BA89F6F00A2CC0B /* skis.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = skis.usdz; sourceTree = "<group>"; };
+		583282E22BA89F7300A2CC0B /* skiBoots.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = skiBoots.usdz; sourceTree = "<group>"; };
 		585DB4D82B8B93B400C76E36 /* ShoppingSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSelectView.swift; sourceTree = "<group>"; };
 		585DB4DB2B8B93DB00C76E36 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		585DB4DD2B8B9B0D00C76E36 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
@@ -54,6 +76,7 @@
 		586E53302B8A50E200A6EF30 /* VibesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibesDetailView.swift; sourceTree = "<group>"; };
 		5892AAA72BA61D6200476294 /* ShoppingCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartView.swift; sourceTree = "<group>"; };
 		5892AAAA2BA7396600476294 /* ShoppingViewItemBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewItemBar.swift; sourceTree = "<group>"; };
+		5892AAAC2BA7655900476294 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		58A6861E2B94EBA50088F771 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
 		58A686202B97F0580088F771 /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
 		58A686222B97F3BD0088F771 /* ShoppableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppableItem.swift; sourceTree = "<group>"; };
@@ -150,7 +173,13 @@
 		5892AAA92BA7393700476294 /* AddOns */ = {
 			isa = PBXGroup;
 			children = (
+				5892AAA72BA61D6200476294 /* ShoppingCartView.swift */,
+				583282E02BA89F6F00A2CC0B /* skis.usdz */,
+				583282DE2BA89F5400A2CC0B /* skiHelmet.usdz */,
+				583282E22BA89F7300A2CC0B /* skiBoots.usdz */,
+				58A686202B97F0580088F771 /* ItemCard.swift */,
 				5892AAAA2BA7396600476294 /* ShoppingViewItemBar.swift */,
+				5892AAAC2BA7655900476294 /* ItemDetailView.swift */,
 			);
 			path = AddOns;
 			sourceTree = "<group>";
@@ -160,6 +189,7 @@
 			children = (
 				58A686222B97F3BD0088F771 /* ShoppableItem.swift */,
 				586E532E2B8A4EE200A6EF30 /* Vibes.swift */,
+				583282DA2BA7908B00A2CC0B /* SelectedItemViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,9 +199,7 @@
 			children = (
 				5892AAA92BA7393700476294 /* AddOns */,
 				58A6861E2B94EBA50088F771 /* ShoppingView.swift */,
-				58A686202B97F0580088F771 /* ItemCard.swift */,
 				586E53142B8A48DA00A6EF30 /* ImmersiveView.swift */,
-				5892AAA72BA61D6200476294 /* ShoppingCartView.swift */,
 			);
 			path = ImmersiveViews;
 			sourceTree = "<group>";
@@ -186,6 +214,7 @@
 				586E53052B8A48DA00A6EF30 /* Sources */,
 				586E53062B8A48DA00A6EF30 /* Frameworks */,
 				586E53072B8A48DA00A6EF30 /* Resources */,
+				5892AAB32BA76B7700476294 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +274,9 @@
 				Base,
 			);
 			mainGroup = 586E53002B8A48DA00A6EF30;
+			packageReferences = (
+				5892AAB42BA76BEA00476294 /* XCLocalSwiftPackageReference "Packages/RealityKitContent" */,
+			);
 			productRefGroup = 586E530A2B8A48DA00A6EF30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,8 +292,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583282E32BA89F7300A2CC0B /* skiBoots.usdz in Resources */,
 				586E531A2B8A48DB00A6EF30 /* Preview Assets.xcassets in Resources */,
 				586E53172B8A48DB00A6EF30 /* Assets.xcassets in Resources */,
+				583282DF2BA89F5400A2CC0B /* skiHelmet.usdz in Resources */,
+				583282E12BA89F6F00A2CC0B /* skis.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +316,9 @@
 			files = (
 				586E53132B8A48DA00A6EF30 /* ContentView.swift in Sources */,
 				585DB4DC2B8B93DB00C76E36 /* AboutView.swift in Sources */,
+				5892AAAD2BA7655900476294 /* ItemDetailView.swift in Sources */,
 				58A686232B97F3BD0088F771 /* ShoppableItem.swift in Sources */,
+				583282DB2BA7908B00A2CC0B /* SelectedItemViewModel.swift in Sources */,
 				586E53112B8A48DA00A6EF30 /* Cop_ItApp.swift in Sources */,
 				585DB4D92B8B93B400C76E36 /* ShoppingSelectView.swift in Sources */,
 				58A686212B97F0580088F771 /* ItemCard.swift in Sources */,
@@ -445,6 +482,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +509,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,6 +597,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		5892AAB42BA76BEA00476294 /* XCLocalSwiftPackageReference "Packages/RealityKitContent" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/RealityKitContent;
+		};
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		586E530E2B8A48DA00A6EF30 /* RealityKitContent */ = {

@@ -12,59 +12,38 @@ import RealityKitContent
 
 struct ShoppingView: View {
     @State var currentVibeIs: Vibes
-    
     @State private var scrollAmount = 0.0
-    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
-    
     @Environment(\.openWindow) private var openWindow
     @Environment(\.dismiss) private var dismiss
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    func createShoppingItemsTest() -> [ShoppableItem] {
-        let currentItems = ShoppableItem.demoListOfItems
-        let repeatedItems = Array(repeatElement(currentItems, count: 3)).flatMap { $0 } // assuming currentItems has 3 items
-        return repeatedItems
-    }
+    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     private var shoppingItems: [ShoppableItem] {
         return createShoppingItemsTest()
     }
     
+    //NOTE: Methods start here
+    func createShoppingItemsTest() -> [ShoppableItem] {
+        //Create logic for which vibe was selected
+        let currentItems = [ShoppableItem(id: UUID(), name: "Black Crow Skis", price: 30.0, category: "Ski", inventoryCount: Int(100.0), description: "A nice pair of Black Crows", model: "skis", thumbnail: "skiPng"),
+                            ShoppableItem(id: UUID(), name: "Ski Boots", price: 40.0, category: "Ski", inventoryCount: Int(100.0), description: "A nice pair heave boots", model: "skiBoots", thumbnail: "snowBoot"),
+                            ShoppableItem(id: UUID(), name: "Helmet", price: 10.0, category: "Ski", inventoryCount: Int(100.0), description: "A nice hat", model: "skiHelmet", thumbnail: "helmetPng")]
+        let repeatedItems = Array(repeatElement(currentItems, count: 3)).flatMap { $0 } // assuming currentItems has 3 items
+        return repeatedItems
+    }
+    
+    
+    //NOTE: UI Starts here
     var body: some View {
         
         VStack {
-            HStack {
-                ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(shoppingItems) { item in
-                        Button(action: {
-                            openWindow(id: "quickLookView")
-                        }) {
-                            ItemCard(currentItem: item)
-                                .frame(width: 150, height: 165)
-                        }
-                        .frame(width: 150, height: 165)
-                    }
-                    
-                }
-                .padding()
-                ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(shoppingItems) { item in
-                        Button(action: {
-                            openWindow(id: "quickLookView")
-                        }) {
-                            ItemCard(currentItem: item)
-                                .frame(width: 150, height: 165)
-                        }
-                        .frame(width: 150, height: 165)
-                    }
-                    
-                }
-                Spacer()
-            }
+            Spacer()
+            ShoppingViewItemBar(currentItem: shoppingItems)
+                .padding(.bottom,25)
             
         }
-        .navigationBarTitle("Detail View")
-        .navigationBarTitleDisplayMode(.inline)// Sets the title for the navigation bar
-        /*.navigationBarBackButtonHidden(true)*/ // Hides the default back button
+        .navigationBarTitle("Shopping")
+        .navigationBarTitleDisplayMode(.inline)
+        /*.navigationBarBackButtonHidden(true)*/
         .toolbar {
             
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -74,6 +53,7 @@ struct ShoppingView: View {
                 }) {
                     Image(systemName: "cart")
                 }
+                
             }
             // Add more ToolbarItems for other purposes, if needed
         }

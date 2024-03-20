@@ -12,16 +12,37 @@ import RealityKitContent
 struct ItemCard: View {
     
     @Environment(\.openWindow) private var openWindow
+    @EnvironmentObject var selectedItemViewModel: SelectedItemViewModel
     var currentItem: ShoppableItem
     
     var body: some View {
-        VStack{
+        HStack{
             Button(action: {
                 print("Button tapped")
-                openWindow(id: "ItemDetailView", value: currentItem)
+                if(selectedItemViewModel.isDetailViewPresented) {
+                    selectedItemViewModel.selectedItem = currentItem
+                } else {
+                    
+                    openWindow(id: "ItemDetailView")
+                    selectedItemViewModel.selectedItem = currentItem
+                    selectedItemViewModel.isDetailViewPresented = true
+                }
             }) {
-                Text("item \(currentItem.name)")
+                VStack{
+                    Image(currentItem.thumbnail)
+                        .resizable()
+                        .scaledToFit().scaleEffect(3.25)
+                        .frame(width: 150, height: 160)
+
+
+                    
+                }
+                
             }
+            .buttonStyle(PlainButtonStyle())
         }
+        .background(Color.gray)
+        .clipShape(RoundedRectangle(cornerRadius: 46))
+
     }
 }

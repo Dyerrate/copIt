@@ -6,3 +6,7 @@
 //
 
 import Foundation
+class SelectedItemViewModel: ObservableObject {
+    @Published var selectedItem: ShoppableItem?
+    @Published var isDetailViewPresented: Bool = false
+}

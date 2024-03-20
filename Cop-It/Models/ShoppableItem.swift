@@ -4,35 +4,43 @@
 //
 //  Created by Samuel Dyer on 3/5/24.
 //
-
 import Foundation
 import SwiftUI
 
-
-struct ShoppableItem: Identifiable, Equatable {
+class ShoppableItem: Identifiable, Equatable, Hashable, Codable {
     let id: UUID
     let name: String
     let price: Double
     let category: String
-    let inventoryCount: Double
+    let inventoryCount: Int // Changed to Int if applicable
     let description: String
-    let image: Image
-    
-    init(id: UUID, name: String, price: Double, category: String, inventoryCount: Double, description: String, image: Image) {
+    let model: String
+    let thumbnail: String
+
+    init(id: UUID, name: String, price: Double, category: String, inventoryCount: Int, description: String, model: String, thumbnail: String) {
         self.id = id
         self.name = name
         self.price = price
         self.category = category
         self.inventoryCount = inventoryCount
         self.description = description
-        self.image = image
+        self.model = model
+        self.thumbnail = thumbnail
     }
-    
-    static let demoListOfItems: [ShoppableItem] = [ // This is a demo list of items
-  //      ShoppableItem(id: UUID(), name: "Shirt", price: 20.0, category: "Ski", inventoryCount: 100.0, description: "A nice shirt", image: Image("Shirt")),
-        ShoppableItem(id: UUID(), name: "Pants", price: 30.0, category: "Ski", inventoryCount: 100.0, description: "A nice pair of pants", image: Image("Pants")),
-        ShoppableItem(id: UUID(), name: "Shoes", price: 40.0, category: "Ski", inventoryCount: 100.0, description: "A nice pair of shoes", image: Image("Shoes")),
-        ShoppableItem(id: UUID(), name: "Hat", price: 10.0, category: "Ski", inventoryCount: 100.0, description: "A nice hat", image: Image("hat"))]
-    
-    
+
+    // Equatable protocol method
+    static func == (lhs: ShoppableItem, rhs: ShoppableItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+    // Hashable protocol method
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    // CodingKeys for Codable protocol
+    private enum CodingKeys: String, CodingKey {
+        case id, name, price, category, inventoryCount, description, model, thumbnail// Changed 'image' to 'imageURL'
+    }
 }
+

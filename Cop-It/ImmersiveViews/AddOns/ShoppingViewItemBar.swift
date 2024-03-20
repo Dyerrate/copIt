@@ -11,12 +11,15 @@ import RealityKit
 import RealityKitContent
 
 struct ShoppingViewItemBar: View {
-    var currentItem: ShoppableItem
-    
+    var currentItem: [ShoppableItem]
     var body: some View {
-        HStack {
-            VStack {
-                Text("item \(currentItem.name)")
+        ScrollView(.horizontal,showsIndicators: false) {
+            HStack(spacing: 10){
+                ForEach(currentItem) { item in
+                    ItemCard(currentItem: item)
+                        .frame(width: 150, height: 160)
+                        .padding(.trailing, 20)
+                }
             }
         }
     }
