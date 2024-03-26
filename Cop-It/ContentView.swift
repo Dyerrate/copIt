@@ -13,10 +13,12 @@ struct ContentView: View {
     //changes
     func openImmersive(selectedVibe: Vibes) {
         Task {
-            let result = await openImmersiveSpace(id: selectedVibe.title)
+            let result = await openImmersiveSpace(id: "Aspen")
             if case .error = result {
                 print("There was an error opening up the current \(selectedVibe.title)")
             }
+            selectedVibeModel.selectedVibe = selectedVibe
+            selectedVibeModel.isImmersiveOpen = true
         }
     }
     
@@ -24,6 +26,7 @@ struct ContentView: View {
     @State private var showImmersiveSpace = false
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @EnvironmentObject var selectedVibeModel: SelectedVibeModel
     
     var body: some View {
         NavigationView {
@@ -37,7 +40,8 @@ struct ContentView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .center, spacing: 20) {
                             ForEach(listOfVibes) { vibe in
-                                NavigationLink(destination: ShoppingView(currentVibeIs: vibe).onAppear(perform: { self.openImmersive(selectedVibe: vibe)})) {
+                                NavigationLink(destination: ShoppingView(currentVibeIs: vibe).onAppear(perform: { self.openImmersive(selectedVibe: vibe)
+    })) {
                                     VStack {
                                         Image(vibe.thumbnail)
                                             .resizable()
@@ -60,6 +64,8 @@ struct ContentView: View {
                 }
             }
         }
+        
         .navigationViewStyle(StackNavigationViewStyle())
+
     }
 }

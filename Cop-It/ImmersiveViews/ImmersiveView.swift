@@ -11,37 +11,35 @@ import RealityKitContent
 
 struct ImmersiveView: View {
 
-    
+    @EnvironmentObject var selectedVibeModel: SelectedVibeModel
+    @State private var rootEntity: Entity? = nil
+
     var body: some View {
         RealityView { content in
-            // Add the initial RealityKit content
-            //load texture from xcassets
-            guard let texture = try? TextureResource.load(named: "skiLodge") else {fatalError("Texture not loaded!")}
-            //create a entity
+            if let entity = rootEntity {
+                content.add(entity)
+            }
+        }
+        .onChange(of: selectedVibeModel.selectedVibe?.immersiveBg) { newValue in
+            // Load texture and create new entity here...
+            guard let texture = try? TextureResource.load(named: newValue ?? "") else {fatalError("Texture not loaded!")}
             let rootEntity = Entity()
 
-            //create material for the texture
-            var material = UnlitMaterial() //Material without influence of lightning
-            // add the texture (image) to the material
+            var material = UnlitMaterial()
             material.color = .init(texture: .init(texture))
-            //generate a sphere make it big so it fills out your whole vision in this example it has the size 1E3 (1* 10^3)
-            //add the material to the entity
+
             rootEntity.components.set(ModelComponent(mesh: .generateSphere(radius: 1E3), materials: [material]))
-            //adjust the properties of the entity size,angle, ...
             rootEntity.scale = .init(x: 1, y: 1, z: -1)
             rootEntity.transform.translation += SIMD3<Float>(0.0, 10.0, 0.0)
             let angle = Angle.degrees(90)
             let rotation = simd_quatf(angle: Float(angle.radians), axis: SIMD3<Float>(0, 1, 0))
             rootEntity.transform.rotation = rotation
 
-            //Add entity to RealityView
-            content.add(rootEntity)
-
-            } update: { content in
-            //Here you can update the RealityKit content
-            }
+            self.rootEntity = rootEntity
         }
+        .frame(minWidth: 1021, maxWidth: 1280, minHeight: 580, maxHeight: 720)
     }
+}
 
 
 #Preview {

@@ -11,6 +11,7 @@
 		583282DF2BA89F5400A2CC0B /* skiHelmet.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 583282DE2BA89F5400A2CC0B /* skiHelmet.usdz */; };
 		583282E12BA89F6F00A2CC0B /* skis.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 583282E02BA89F6F00A2CC0B /* skis.usdz */; };
 		583282E32BA89F7300A2CC0B /* skiBoots.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 583282E22BA89F7300A2CC0B /* skiBoots.usdz */; };
+		584381BC2BB23D7E00629B22 /* SelectedVibeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584381BB2BB23D7E00629B22 /* SelectedVibeModel.swift */; };
 		585DB4D92B8B93B400C76E36 /* ShoppingSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585DB4D82B8B93B400C76E36 /* ShoppingSelectView.swift */; };
 		585DB4DC2B8B93DB00C76E36 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585DB4DB2B8B93DB00C76E36 /* AboutView.swift */; };
 		585DB4DE2B8B9B0D00C76E36 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585DB4DD2B8B9B0D00C76E36 /* HelpView.swift */; };
@@ -59,6 +60,7 @@
 		583282DE2BA89F5400A2CC0B /* skiHelmet.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = skiHelmet.usdz; path = Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/skiHelmet.usdz; sourceTree = SOURCE_ROOT; };
 		583282E02BA89F6F00A2CC0B /* skis.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = skis.usdz; sourceTree = "<group>"; };
 		583282E22BA89F7300A2CC0B /* skiBoots.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = skiBoots.usdz; sourceTree = "<group>"; };
+		584381BB2BB23D7E00629B22 /* SelectedVibeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedVibeModel.swift; sourceTree = "<group>"; };
 		585DB4D82B8B93B400C76E36 /* ShoppingSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSelectView.swift; sourceTree = "<group>"; };
 		585DB4DB2B8B93DB00C76E36 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		585DB4DD2B8B9B0D00C76E36 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				58A686222B97F3BD0088F771 /* ShoppableItem.swift */,
 				586E532E2B8A4EE200A6EF30 /* Vibes.swift */,
 				583282DA2BA7908B00A2CC0B /* SelectedItemViewModel.swift */,
+				584381BB2BB23D7E00629B22 /* SelectedVibeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				586E53132B8A48DA00A6EF30 /* ContentView.swift in Sources */,
 				585DB4DC2B8B93DB00C76E36 /* AboutView.swift in Sources */,
+				584381BC2BB23D7E00629B22 /* SelectedVibeModel.swift in Sources */,
 				5892AAAD2BA7655900476294 /* ItemDetailView.swift in Sources */,
 				58A686232B97F3BD0088F771 /* ShoppableItem.swift in Sources */,
 				583282DB2BA7908B00A2CC0B /* SelectedItemViewModel.swift in Sources */,

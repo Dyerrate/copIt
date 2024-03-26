@@ -6,3 +6,7 @@
 //
 
 import Foundation
+class SelectedVibeModel: ObservableObject {
+    @Published var selectedVibe: Vibes?
+    @Published var isImmersiveOpen: Bool = false
+}
